@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Interactive Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Scroll Progress Bar -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- Side Navigation -->
+  <div class="sidenav" id="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+  <!-- Menu icon -->
+  <span class="menu-icon" onclick="openNav()">&#9776;</span>
+
+  <!-- Banner -->
+  <header class="banner">
+    <h1>Hi, I'm Medei</h1>
+    <p>Web Developer | Designer | Creative Thinker</p>
+    <a href="#projects" class="btn">View Projects</a>
+  </header>
+
+  <!-- About Section -->
+  <section id="about" class="content-section">
+    <h2>About Me</h2>
+    <div class="about-container">
+      <img src="https://via.placeholder.com/250" alt="My photo">
+      <p>I love building responsive, beautiful websites that connect with users. I specialize in front-end development and UI/UX design. Let's build something amazing together!</p>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="content-section">
+    <h2>My Projects</h2>
+    <div class="card-container">
+      <div class="card">
+        <i class="fas fa-code fa-3x"></i>
+        <h3>Portfolio Website</h3>
+        <p>Modern responsive portfolio using HTML, CSS, and JavaScript.</p>
+        <a href="#" class="card-btn">Preview</a>
+      </div>
+      <div class="card">
+        <i class="fas fa-paint-brush fa-3x"></i>
+        <h3>UI Design Kit</h3>
+        <p>Custom UI kit with reusable components for designers.</p>
+        <a href="#" class="card-btn">Preview</a>
+      </div>
+      <div class="card">
+        <i class="fas fa-mobile-alt fa-3x"></i>
+        <h3>Mobile App</h3>
+        <p>Cross-platform mobile app with real-time features.</p>
+        <a href="#" class="card-btn">Preview</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery" class="gallery">
+    <h2>Gallery</h2>
+    <div class="gallery-grid">
+      <img src="https://via.placeholder.com/300x200" alt="Work 1" onclick="openModal(this.src)">
+      <img src="https://via.placeholder.com/300x200" alt="Work 2" onclick="openModal(this.src)">
+      <img src="https://via.placeholder.com/300x200" alt="Work 3" onclick="openModal(this.src)">
+      <img src="https://via.placeholder.com/300x200" alt="Work 4" onclick="openModal(this.src)">
+      <img src="https://via.placeholder.com/300x200" alt="Work 5" onclick="openModal(this.src)">
+    </div>
+  </section>
+
+  <!-- Lightbox Modal -->
+  <div id="lightboxModal" class="modal" onclick="closeModal()">
+    <img class="modal-content" id="modalImage">
+  </div>
+
+  <!-- Contact Section -->
+  <section id="contact" class="content-section">
+    <h2>Contact Me</h2>
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Scroll to Top Button -->
+  <button onclick="scrollToTop()" id="scrollTopBtn" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+
+  <script src="script.js"></script>
+</body>
+</html>
