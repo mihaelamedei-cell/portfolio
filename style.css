@@ -128,9 +128,9 @@ a {
 /* About Section */
 .about-container {
   display: flex;
+  flex-direction: row;
   align-items: center;
   gap: 30px;
-  flex-wrap: wrap;
 }
 
 .about-container img {
@@ -303,7 +303,7 @@ a {
   }
 
   .about-container {
-    flex-direction: column;
+    flex-direction: row;
     text-align: center;
   }
 
